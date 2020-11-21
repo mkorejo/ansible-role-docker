@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-role-docker
+
+- name: Perfom common configuration tasks
+  include_tasks: common.yml
+  when: ansible_virtualization_type != "docker"
+
+- name: Ensure Docker is installed
+  include_tasks: docker.yml
+
+- name: Ensure Kubernetes packages are installed
+  include_tasks: kube.yml

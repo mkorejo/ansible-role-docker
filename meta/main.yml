@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Murad Korejo
+  description: Installs Docker and prepares nodes for kubeadm/RKE
+  license: The Unlicense
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - 20.04
+
+  galaxy_tags:
+  - docker
+  - kubeadm
+  - rke
+
+dependencies: []

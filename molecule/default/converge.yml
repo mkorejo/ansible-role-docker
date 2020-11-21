@@ -1,0 +1,8 @@
+---
+- name: Converge
+  become: true
+  hosts: all
+  tasks:
+    - name: "Include ansible-role-docker"
+      include_role:
+        name: "ansible-role-docker"

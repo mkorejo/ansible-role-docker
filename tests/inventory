@@ -1,0 +1,11 @@
+[default]
+localhost
+
+[aws]
+ec2-54-82-65-29.compute-1.amazonaws.com
+ec2-18-234-226-21.compute-1.amazonaws.com
+ec2-54-85-6-69.compute-1.amazonaws.com
+
+[aws:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=/Users/muradkorejo/Downloads/muradkorejo.pem

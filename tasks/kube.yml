@@ -1,0 +1,24 @@
+---
+- name: Ensure prerequisite packages are present
+  package:
+    name:
+      - apt-transport-https
+      - curl
+    state: present
+
+- name: Ensure Google's GPG key is present
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Ensure Kubernetes repositiory is configured
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Ensure Kubernetes packages are present
+  package:
+    name:
+      - kubeadm
+      - kubectl
+      - kubelet
